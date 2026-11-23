@@ -6,11 +6,12 @@ test('handling-dropDown', async({page})=>{
     await page.locator('#searchDropdownBox').selectOption('search-alias=stripbooks')
     await page.waitForTimeout(2000)
     await page.locator('#searchDropdownBox').selectOption({label: 'Apps & Games'})
-    await page.waitForTimeout(2000)
+    
 
     await page.locator('[title="Search in"]').selectOption({index: 2})
     
     await page.pause()
+    console.log('added line')
 })
 
 
