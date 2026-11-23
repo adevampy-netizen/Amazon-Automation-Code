@@ -5,6 +5,8 @@ test('amazon search', async({page})=>{
     await page.locator('input#twotabsearchtextbox').fill('laptop')
     await page.locator('input[id="nav-search-submit-button" ][class*="nav-input"]').click()
     await page.waitForTimeout(2000)
+    await page.goto('https://www.google.com/')
+    console.log('added line number 8 and 9')
     await page.screenshot({path: './screenshot/amazon.png'})
     /*
     ./screenshot/amazon.png   means in root level save in screenshot folder 
@@ -16,9 +18,9 @@ test('amazon search', async({page})=>{
     
 })
 
-test('demoqa', async({page})=>{
-    await page.goto('https://demoqa.com/')
-    await page.locator('//h5[text()="Elements"]').click()
+
+
+    
     
 
 } )
